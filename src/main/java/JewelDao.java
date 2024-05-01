@@ -39,7 +39,7 @@ public class JewelDao {
 	}
 	
 	public List<Jewel> searchUpTo(int upToPrice){
-		List<Jewel> jewels = jdbcTemplate.query("select * from jewel WHERE price < ?", new BeanPropertyRowMapper<>(Jewel.class), upToPrice);
+		List<Jewel> jewels = jdbcTemplate.query("select * from jewel WHERE price <= ?", new BeanPropertyRowMapper<>(Jewel.class), upToPrice);
 		return jewels;
 	}
 }

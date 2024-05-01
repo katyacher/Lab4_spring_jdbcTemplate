@@ -31,7 +31,7 @@ public class Runner {
             System.out.println("2. Вывести все записи из таблицы БД в консоль");
             System.out.println("3. Редактировать запись БД по id");
             System.out.println("4. Удалить запись из БД по  id");
-            System.out.println("5. Искать все украшения стоимостью менее 10000");
+            System.out.println("5. Искать все украшения со стоимостью до определенной суммы (включительно)");
             System.out.println("6. Завершение работы приложения.");
             
             s = scanner.next(); 
@@ -73,12 +73,30 @@ public class Runner {
                         case 3:
                         	System.out.println("Введите id:");
                         	id = scanner.nextInt(); 
-                        
+                        	
+                        	
                     		for(Jewel jewel: jewelDao.findAll()) {
                     			if(jewel.getId() == id) {
-                    				jewelDao.update(id, jewel);
+                    				System.out.println("Введите новые параметры:");
+                                	System.out.println("---размер:");
+                                	size = scanner.nextInt();
+                                	jewel.setSize(size);
+                                	System.out.println("---цена:");
+                                	price = scanner.nextInt(); 
+                                	jewel.setPrice(price);
+                                	System.out.println("---тип украшения:");
+                                	type = scanner.next();
+                                	jewel.setType(type);
+                                	System.out.println("---метал:");
+                                	metal = scanner.next();
+                                	jewel.setMetal(metal);
+                                	System.out.println("---вставка из камня:");
+                                	stone = scanner.next();
+                                	jewel.setStone(stone);
+                            		jewelDao.update(id, jewel);
                     			};
                     		}
+                    		
                             break;
                         case 4:
                         	System.out.println("Введите id:");
