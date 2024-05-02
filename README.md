@@ -23,7 +23,8 @@
 
  <h2>Сборка проекта:</h2>
  
- 1. Развернуть базу данных из дампа test_db.sql в вашем кластере PostgreSQL:
+ 1.  Скачать архив проекта
+ 2.  Развернуть базу данных из дампа test_db.sql в вашем кластере PostgreSQL:
   - psql -f test_db.sql -U postgres  
   - psql -d test_db -U postgres
  
