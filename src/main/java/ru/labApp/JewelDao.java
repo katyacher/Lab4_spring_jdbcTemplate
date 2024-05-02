@@ -1,6 +1,6 @@
-
-
+package ru.labApp;
 import java.util.List;
+
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
