@@ -1,8 +1,4 @@
-ru/labApp/Runner.class
-ru/labApp/Jewel.class
-JewelDao.class
 SpringConfig.class
-ru/labApp/JewelDao.class
-ru/labApp/SpringConfig.class
 Jewel.class
+JewelDao.class
 Runner.class
